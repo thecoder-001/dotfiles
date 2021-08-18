@@ -1,0 +1,40 @@
+# GRUB2 gfxmenu Mechanics theme
+
+# Global Property
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#000000"
+terminal-font: "Gnu Unifont Mono Regular 16"
+#terminal-box: "terminal_box_*.png"
+#terminal-left: "0"
+#terminal-top: "0"
+#terminal-width: "100%"
+#terminal-height: "100%"
+#terminal-border: "0"
+
+# Show the boot menu
++ boot_menu {
+  left = 2%
+  top = 22%
+  width = 42%
+  height = 60%
+  item_font = "Josefin Sans Medium 20 Regular 20"
+  item_color = "#70161E"
+  selected_item_font = "Josefin Sans Bold 20"
+  selected_item_color = "#1C3144"
+  item_height = 38
+  item_spacing = 9
+  selected_item_pixmap_style = "select_*.png"
+}
+
+# Show a countdown message using the label component
++ label {
+  top = 92%
+  left = 74%
+  width = 36%
+  align = "left"
+  id = "__timeout__"
+  text = "      ▲  ▼  : %d s"
+  color = "#70161E"
+  font = "Josefin Sans Regular 24"
+}
